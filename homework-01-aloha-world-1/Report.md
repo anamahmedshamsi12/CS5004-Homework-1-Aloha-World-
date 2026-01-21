@@ -34,8 +34,13 @@ class ConsoleView {
    - SCANNER: Scanner
    - LOCALITY_OPTIONS: LIST~String~
    
-   - ConsoleView:
-
+   - ConsoleView()
+   - getName(): String
+   + getLocality(): int
+   + checkRunAgain(): boolean
+   + printGreeting(greeting: String): void
+  }
+```
 
 
 ### Program Flow
