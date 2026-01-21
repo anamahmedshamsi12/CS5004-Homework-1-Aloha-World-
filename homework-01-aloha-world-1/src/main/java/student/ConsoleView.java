@@ -1,7 +1,7 @@
 package student;
 
 import java.util.Scanner; // this imports the Scanner class from the java.util package.
-import java.util.List; // this imports the List class from the java.util package.
+import java.util.List; // this imports the List class from the java.util packag
 
 /**
  * ClientView is a class that is used to interact with the client.
@@ -18,7 +18,7 @@ public final class ConsoleView {
     // application to
     // prevent conflicts.
     /** scanner pointing towards System.in. */
-    private static final Scanner SCANNER = new Scanner(System); // System.in is a standard input
+    private static final Scanner SCANNER = new Scanner(System.in); // System.in is a standard input
                                                                 // stream, it is used to read
                                                                 // data from the keyboard.
     /** Stores the locality lists from Greeter to prevent additional copies. */
