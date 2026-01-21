@@ -56,12 +56,11 @@ public class Greeter {
      */
     public Greeter(String name, int locality) {
         this.name = name;
-        if (locality < 0 || locality > localityList.size()) {
+        if (locality < 1 || locality > localityList.size()) {
             throw new IllegalArgumentException(
-                    String.format("Locality must be between 1 and %d", localityList.size()));
+                    String.format("Locality must be between 1 and %d", localityList.size())
+            );
         }
-        this.locality = locality;
-    }
 
     /**
      * Returns the name of the greeter.
@@ -99,13 +98,15 @@ public class Greeter {
      * @param locality the int value of the locality, if out of range, throws an
      *        IllegalArgumentException
      */
-    public void setLocality(int locality) {
-        if (locality < 0 || locality > localityList.size()) {
-            throw new IllegalArgumentException(
-                    String.format("Locality must be between 1 and %d", localityList.size()));
+        public void setLocality(int locality) {
+            if (locality < 1 || locality > localityList.size()) {
+                throw new IllegalArgumentException(
+                        String.format("Locality must be between 1 and %d", localityList.size())
+                );
+            }
+            this.locality = locality;
         }
-        this.locality = locality;
-    }
+
 
     /**
      * This method is used to greet the user. It will return a greeting based on their set locality.
@@ -188,24 +189,22 @@ public class Greeter {
      * 
      * @return the locality as a string
      */
-    private String getLocalityString() {
-        if (locality < 0 || locality >= localityList.size()) {
-            return "USA";
+        private String getLocalityString() {
+            // locality is 1-based, list is 0-based
+            return localityList.get(locality - 1);
         }
-        return localityList.get(locality);
-    }
 
-    /**
-     * For new objects is is often a good idea to override the hashCode method.
-     *
-     * HashCodes are used in various data structures (like hashtables) to provide a 'unique'
-     * identifier for an object. In this case as long as the name and locality are the same, the
-     * hashcode will be the same.
-     *
-     * Java assumes that if .equals is true, the hashcodes should also be the same.
-     * 
-     * @return the hashcode
-     */
+        /**
+         * For new objects is is often a good idea to override the hashCode method.
+         *
+         * HashCodes are used in various data structures (like hashtables) to provide a 'unique'
+         * identifier for an object. In this case as long as the name and locality are the same, the
+         * hashcode will be the same.
+         *
+         * Java assumes that if .equals is true, the hashcodes should also be the same.
+         *
+         * @return the hashcode
+         */
     @Override
     public int hashCode() {
         return name.hashCode() + locality;
