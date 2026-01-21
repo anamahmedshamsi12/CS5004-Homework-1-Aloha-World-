@@ -98,7 +98,7 @@ public class Greeter {
      * @param locality the int value of the locality, if out of range, throws an
      *        IllegalArgumentException
      */
-        public void setLocality(int locality) {
+        public void setLocality(int locality) {}
             if (locality < 1 || locality > localityList.size()) {
                 throw new IllegalArgumentException(
                         String.format("Locality must be between 1 and %d", localityList.size())
