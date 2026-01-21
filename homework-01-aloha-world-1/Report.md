@@ -16,7 +16,25 @@ class AlohaWorld {
 }
 ```
 2. **Greeter** UML mermaid diagram:
+```mermaid
+classDiagram
+class Greeter {
+   - name: String
+   - locality: int
+   
+   +Greeter(name: String, locality: int)
+   +greet(): Greeting
+   +setLocality(locality: int): void
+  }
+  ```
 3. **ConsoleView** UML mermaid diagram: 
+```mermaid
+classDiagram
+class ConsoleView {
+   - SCANNER: Scanner
+   - LOCALITY_OPTIONS: LIST~String~
+   
+   - ConsoleView:
 
 
 
