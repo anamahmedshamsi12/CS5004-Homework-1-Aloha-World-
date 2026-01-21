@@ -45,8 +45,7 @@ class ConsoleView {
 
 ### Program Flow
 Write a short paragraph detailing the flow of the program in your own words. This is to help you understand / trace the code (and give you practice of something called a code walk that will be required in this course).
-
-
+> The beginning of the program starts by first going through the **AlohaWorld** file which is where `main()` is located, otherwise known as the starting point of the program. After the starting point, it begins by using the **ConsoleView** file to prompt the user for their name and where they are from. Then, it creates a greeting message from the **Greeter** file, which **ConsoleView** then uses to show on the screen to the user. After that, the program will then prompt the user again to ask if it wants to run it again. If the user answers yes, it will ask for another location, the greeting will change, and it will show a new message. If the user says no, then the program will end. 
 ## Assignment Questions
 
 1. List three additional java syntax items you didn't know when reading the code.  (make sure to use * for the list items, see example below, the backtick marks are used to write code inline with markdown)
