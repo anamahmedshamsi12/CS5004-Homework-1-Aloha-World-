@@ -61,6 +61,8 @@ public class Greeter {
                     String.format("Locality must be between 1 and %d", localityList.size())
             );
         }
+        this.locality = locality;
+    }
 
     /**
      * Returns the name of the greeter.
@@ -98,14 +100,14 @@ public class Greeter {
      * @param locality the int value of the locality, if out of range, throws an
      *        IllegalArgumentException
      */
-        public void setLocality(int locality) {}
-            if (locality < 1 || locality > localityList.size()) {
-                throw new IllegalArgumentException(
-                        String.format("Locality must be between 1 and %d", localityList.size())
-                );
-            }
-            this.locality = locality;
+    public void setLocality(int locality) {
+        if (locality < 1 || locality > localityList.size()) {
+            throw new IllegalArgumentException(
+                    String.format("Locality must be between 1 and %d", localityList.size())
+            );
         }
+        this.locality = locality;
+    }
 
 
     /**
@@ -189,10 +191,9 @@ public class Greeter {
      * 
      * @return the locality as a string
      */
-        private String getLocalityString() {
-            // locality is 1-based, list is 0-based
-            return localityList.get(locality - 1);
-        }
+    private String getLocalityString() {
+        return localityList.get(locality - 1);
+    }
 
         /**
          * For new objects is is often a good idea to override the hashCode method.
