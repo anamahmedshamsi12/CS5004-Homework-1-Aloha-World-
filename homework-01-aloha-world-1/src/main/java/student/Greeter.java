@@ -56,7 +56,7 @@ public class Greeter {
      */
     public Greeter(String name, int locality) {
         this.name = name;
-        if (locality < 1 || locality > localityList.size()) {
+        if (locality < 0 || locality > localityList.size()) {
             throw new IllegalArgumentException(
                     String.format("Locality must be between 1 and %d", localityList.size()));
         }
@@ -100,7 +100,7 @@ public class Greeter {
      *        IllegalArgumentException
      */
     public void setLocality(int locality) {
-        if (locality < 1 || locality > localityList.size()) {
+        if (locality < 0 || locality > localityList.size()) {
             throw new IllegalArgumentException(
                     String.format("Locality must be between 1 and %d", localityList.size()));
         }
