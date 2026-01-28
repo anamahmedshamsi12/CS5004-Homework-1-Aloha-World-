@@ -20,4 +20,21 @@ Mermaid is a markdown language that allows you to create diagrams. You can find 
 
 
 <!-- start your playground code under this dashed line -->
-----
+## (1) 3 Markdown Elements
+> 1. Links — You can make clickable links with [link]([Markdown Guide](https://www.markdownguide.org)) that take readers to other pages, which is useful when referencing resources
+
+> 2. Lists
+> - Item
+> - Item
+
+> 3. Horizontal rule — You can create a visual divider in Markdown using three dashes --- (or ***). This adds a line across the page that helps separate sections of content and makes the document easier to read.
+> ---
+
+ ## (2) Mermaid Diagram (Used For Assignment)
+```mermaid
+classDiagram
+class AlohaWorld {
+  -AlohaWorld()
+  +main(String[] args) void
+}
+```

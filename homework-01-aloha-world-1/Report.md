@@ -86,7 +86,8 @@ Write a short paragraph detailing the flow of the program in your own words. Thi
 
 6. Describe Test Driving Development (TDD) in your own words. 
 
-    Same as above - short answer    
+    > Test-Driven Development (TDD) is a software development approach where tests are written before writing the actual code that implements the functionality[^7]. The idea is to first define how the program should behave through failing tests, then write code to make those tests pass, and finally clean up the code through refactoring. This helps catch bugs early and ensures the program continues working correctly as changes are made[^7].
+
 
 7. Go to the [Markdown Playground](MarkdownPlayground.md) and add at least 3 different markdown elements you learned about by reading the markdown resources listed in the document. Additionally you need to add a mermaid class diagram (of your choice does not have to follow the assignment. However, if you did use mermaid for the assignment, you can just copy that there). Add the elements into the markdown file, so that the formatting changes are reserved to that file. 
 
@@ -130,7 +131,9 @@ These questions require deeper thinking of the topic. We don't expect 100% corre
 > 
  > [^6] What is Javadoc tool and how to use it: 2024. https://www.geeksforgeeks.org/java/what-is-javadoc-tool-and-how-to-use-it/.
 Accessed: 2026-01-28.
-
+>
+ > [^7] Test-Driven Development (TDD): 2024. https://www.geeksforgeeks.org/software-engineering/test-driven-development-tdd/
+. Accessed: 2026-01-28.
 
 <!-- This is a comment, below this link the links in the document are placed here to make ti easier to read. This is an optional style for markdown, and often as a student you will include the links inline. for example [mermaid](https://mermaid.js.org/intro/syntax-reference.html) -->
 [mermaid]: https://mermaid.js.org/intro/syntax-reference.html
