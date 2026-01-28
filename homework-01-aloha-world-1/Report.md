@@ -98,9 +98,10 @@ These questions require deeper thinking of the topic. We don't expect 100% corre
 
 
 1. Why would we want to keep interaction with the client contained to ConsoleView?
-
+   > Because if you let every class talk directly to the user, the program would get really tangled really fast. By putting all the input and output in `ConsoleView`, the rest of the code can focus on doing its job instead of worrying about printing messages or reading from the keyboard. It kind of creates a boundary between “how the user interacts with the program” and “what the program actually does.”
 
 2. Right now, the application isn't very dynamic in that it can be difficult to add new languages and greetings without modifying the code every time. Just thinking programmatically,  how could you make the application more dynamic? You are free to reference Geeting.java and how that could be used in your design.
+   > Right now, the greetings are mostly hardcoded into the program, so adding a new language requires changing the Java code each time. A more dynamic design could use the `Greeting` class to represent each language and store multiple `Greeting` objects in a collection like a `List` or `Map`, where the locality ID maps to a specific greeting. Instead of using conditionals to decide which greeting to use, the program could look up the correct `Greeting` object and format the output using `getFormatStr()`. This could be made even more flexible by loading greetings from a file so new languages can be added without modifying the source code.
 
 
 
