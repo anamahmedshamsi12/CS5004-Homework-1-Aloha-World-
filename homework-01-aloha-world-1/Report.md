@@ -70,7 +70,7 @@ Write a short paragraph detailing the flow of the program in your own words. Thi
 .
 3. What does `main` do in Java? 
 
-    Go ahead and answer the question as a short paragraph / few sentences. Notice the indent, this is valid because it is a list item. (erase this line before writing.)
+    > The `main` method in Java is the starting point of every program — it is where the Java Virtual Machine (JVM) begins executing code when the program runs. Without a properly defined `main` method, the program won’t start because the JVM looks specifically for this method signature (`public static void main(String[] args)`) to launch execution. In this assignment, the `main` method handled setting up variables and calling other methods to run the application, which is why it was necessary for the program to compile and run successfully[^4].
 
 
 4. What does `toString()` do in Java? Why should any object class you create have a `toString()` method?
@@ -111,14 +111,17 @@ These questions require deeper thinking of the topic. We don't expect 100% corre
 
 [^2]: Math (Java Platform SE 17). https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Math.html. Accessed: 2024-03-30.
 
-[^1] String.format() Method in Java: 2024. https://www.w3schools.com/java/ref_string_format.asp
+>   [^1] String.format() Method in Java: 2024. https://www.w3schools.com/java/ref_string_format.asp
 . Accessed: 2026-01-28. 
-
-[^2] Java this Keyword: 2024. https://www.w3schools.com/java/ref_keyword_this.asp
+>
+ >  [^2] Java this Keyword: 2024. https://www.w3schools.com/java/ref_keyword_this.asp
 . Accessed: 2026-01-28. 
-
-[^3] Introduction to Testing in Java (JUnit): 2024. https://java-programming.mooc.fi/part-6/3-introduction-to-testing
+>
+ >  [^3] Introduction to Testing in Java (JUnit): 2024. https://java-programming.mooc.fi/part-6/3-introduction-to-testing
 . Accessed: 2026-01-28. 
+>
+ >  [^4] Java main method in Java: 2024. https://www.geeksforgeeks.org/java/java-main-method-public-static-void-main-string-args/
+. Accessed: 2026-01-28.
 <!-- This is a comment, below this link the links in the document are placed here to make ti easier to read. This is an optional style for markdown, and often as a student you will include the links inline. for example [mermaid](https://mermaid.js.org/intro/syntax-reference.html) -->
 [mermaid]: https://mermaid.js.org/intro/syntax-reference.html
 [AlohaWorld.java]: src/main/java/student/AlohaWorld.java
