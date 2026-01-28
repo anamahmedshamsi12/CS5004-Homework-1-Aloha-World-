@@ -75,11 +75,13 @@ Write a short paragraph detailing the flow of the program in your own words. Thi
 
 4. What does `toString()` do in Java? Why should any object class you create have a `toString()` method?
 
-    Same as above - short answer
+    > The `toString()` method in Java returns a string representation of an object so that its data can be displayed in a readable format instead of showing a memory reference[^5]. By default, Java’s version from the `Object` class is not very useful, so overriding it allows developers to show meaningful information about an object’s fields. Any object class should include a `toString()` method because it makes debugging, testing, and printing objects much clearer and easier to understand[^5].
+
 
 5. What is javadoc style commenting? What is it used for? 
 
-    Same as above - short answer
+    > Javadoc-style commenting is a specific way of writing comments in Java that start with `/**` and end with `*/` so that tools like the Javadoc utility can automatically generate documentation from your source code[^6]. It is used to describe classes, methods, parameters, and return values in a structured format so that other developers (and documentation tools) can understand what your code does without reading the implementation. This makes it easier to share, maintain, and reference API details for your code[^6].
+
 
 
 6. Describe Test Driving Development (TDD) in your own words. 
@@ -122,6 +124,14 @@ These questions require deeper thinking of the topic. We don't expect 100% corre
 >
  >  [^4] Java main method in Java: 2024. https://www.geeksforgeeks.org/java/java-main-method-public-static-void-main-string-args/
 . Accessed: 2026-01-28.
+> 
+ > [^5] String toString() method in Java: 2024. https://www.geeksforgeeks.org/java/string-tostring-method-in-java/
+. Accessed: 2026-01-28.
+> 
+ > [^6] What is Javadoc tool and how to use it: 2024. https://www.geeksforgeeks.org/java/what-is-javadoc-tool-and-how-to-use-it/.
+Accessed: 2026-01-28.
+
+
 <!-- This is a comment, below this link the links in the document are placed here to make ti easier to read. This is an optional style for markdown, and often as a student you will include the links inline. for example [mermaid](https://mermaid.js.org/intro/syntax-reference.html) -->
 [mermaid]: https://mermaid.js.org/intro/syntax-reference.html
 [AlohaWorld.java]: src/main/java/student/AlohaWorld.java
