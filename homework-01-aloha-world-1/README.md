@@ -1,8 +1,8 @@
 Name: **Anam Shamsi** 
 
-Github Account name: https://github.khoury.northeastern.edu/anamshamsi
+Github Account name: anamahmedshamsi12
 
-Link to Assignment on Github: https://github.khoury.northeastern.edu/anamshamsi/CS5004-Homework-1-Aloha-World-.git
+Link to Assignment on Github: https://github.com/anamahmedshamsi12/CS5004-Homework-1-Aloha-World-.git
 
 How many hours did it take you to complete this assignment (estimate)? 
 > Since I started the assignment last week and made edits over multiple days, I would estimate it took around 6-8 hours total. 
