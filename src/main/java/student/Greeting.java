@@ -9,50 +9,55 @@ package student;
  *   Greeting g = new Greeting(2, "USA");
  *   String msg = String.format(g.getFormatStr(false), "John");
  *   // msg -> "Hello, John!"
- *
- * It keeps track of:
- * - localityID (number)
- * - localityName (string)
- * - asciiGreeting (ex: "Ni Hao")
- * - unicodeGreeting (ex: "你好")
- * - formatStr (pattern that decides where the greeting + name go)
  */
 public class Greeting {
 
+    /** The numeric locality identifier. */
     private final int localityID;
+
+    /** The name of the locality. */
     private final String localityName;
+
+    /** The ASCII greeting word (example: "Ni Hao"). */
     private final String asciiGreeting;
+
+    /** The Unicode greeting word (example: "你好"). */
     private final String unicodeGreeting;
+
+    /** The format string used to build the final greeting message. */
     private final String formatStr;
 
     /**
-     * Default greeting that creates "Hello, {name}!".
+     * Creates a default greeting that produces "Hello, {name}!".
      *
-     * Uses the default format "%s, %%s!"
-     * Explanation:
-     * - first %s is the greeting word (Hello)
-     * - %%s becomes a literal "%s" so later you can insert the person's name
+     * Uses the default format "%s, %%s!".
+     *
+     * @param localityID the numeric locality identifier
+     * @param localityName the name of the locality
      */
     public Greeting(int localityID, String localityName) {
         this(localityID, localityName, "Hello", "Hello", "%s, %%s!");
     }
 
     /**
-     * Greeting where ascii and unicode are the same.
-     * Example: new Greeting(1, "Hawaii", "Aloha")
-     * becomes "Aloha, {name}!"
+     * Creates a greeting where ASCII and Unicode greetings are the same.
+     *
+     * @param localityID the numeric locality identifier
+     * @param localityName the name of the locality
+     * @param greeting the greeting word to use for both ASCII and Unicode
      */
     public Greeting(int localityID, String localityName, String greeting) {
         this(localityID, localityName, greeting, greeting, "%s, %%s!");
     }
 
     /**
-     * Fully customized greeting.
+     * Creates a fully customized greeting.
      *
-     * Example:
-     * new Greeting(3, "China", "Ni Hao", "你好", "%%s, %s!")
-     * - unicode format becomes "%s, 你好!"   (name first)
-     * - ascii format becomes   "%s, Ni Hao!"
+     * @param localityID the numeric locality identifier
+     * @param localityName the name of the locality
+     * @param asciiGreeting the ASCII greeting word
+     * @param unicodeGreeting the Unicode greeting word
+     * @param formatStr the format string used to assemble the final greeting
      */
     public Greeting(int localityID, String localityName,
                     String asciiGreeting, String unicodeGreeting, String formatStr) {
@@ -63,30 +68,46 @@ public class Greeting {
         this.formatStr = formatStr;
     }
 
-    /** Returns the locality id number. */
+    /**
+     * Returns the locality ID.
+     *
+     * @return the numeric locality identifier
+     */
     public int getLocalityID() {
         return localityID;
     }
 
-    /** Returns the locality name. */
+    /**
+     * Returns the locality name.
+     *
+     * @return the name of the locality
+     */
     public String getLocalityName() {
         return localityName;
     }
 
-    /** Returns the ascii greeting word only (no name formatting). */
+    /**
+     * Returns the ASCII greeting word (without formatting).
+     *
+     * @return the ASCII greeting word
+     */
     public String getAsciiGreeting() {
         return asciiGreeting;
     }
 
-    /** Returns the unicode greeting word only (no name formatting). */
+    /**
+     * Returns the Unicode greeting word (without formatting).
+     *
+     * @return the Unicode greeting word
+     */
     public String getUnicodeGreeting() {
         return unicodeGreeting;
     }
 
     /**
-     * Gets the unicode format string (default).
-     * This returns a string that still has a %s for the name.
-     * Example: "Hello, %s!"
+     * Returns the default (Unicode) format string.
+     *
+     * @return the formatted greeting pattern using the Unicode greeting
      */
     public String getFormatStr() {
         return getFormatStr(false);
@@ -95,13 +116,8 @@ public class Greeting {
     /**
      * Returns the format string with the greeting inserted.
      *
-     * If asciiOnly is true, use asciiGreeting.
-     * If asciiOnly is false, use unicodeGreeting.
-     *
-     * Example:
-     * formatStr = "%s, %%s!"
-     * greeting  = "Hello"
-     * result    = "Hello, %s!"
+     * @param asciiOnly if true use ASCII greeting; otherwise use Unicode greeting
+     * @return the formatted greeting pattern ready to accept the person's name
      */
     public String getFormatStr(boolean asciiOnly) {
         String greeting = asciiOnly ? asciiGreeting : unicodeGreeting;
@@ -109,8 +125,9 @@ public class Greeting {
     }
 
     /**
-     * Debug string showing all stored fields.
-     * Format must match the tests exactly.
+     * Returns a debug string representation of this Greeting.
+     *
+     * @return a string showing all stored field values
      */
     @Override
     public String toString() {
@@ -120,3 +137,4 @@ public class Greeting {
         );
     }
 }
+
