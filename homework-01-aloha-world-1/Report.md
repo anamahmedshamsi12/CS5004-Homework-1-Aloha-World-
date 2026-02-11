@@ -10,40 +10,53 @@ link an image in markdown. You may also use [mermaid] class diagrams if you pref
 ```mermaid
 classDiagram
 
-class AlohaWorld {
-  -AlohaWorld()
-  +main(String[] args) void
-}
+    class AlohaWorld {
+        -AlohaWorld()
+        +main(String[] args) void
+    }
 
-class ConsoleView {
-  -SCANNER : Scanner
-  -LOCALITY_OPTIONS : List~String~
-  -ConsoleView()
-  +getName() String
-  +getLocality() int
-  +checkRunAgain() boolean
-  +printGreeting(String greeting) void
-}
+    class ConsoleView {
+        -SCANNER : Scanner
+        -LOCALITY_OPTIONS : List~String~
+        -ConsoleView()
+        +getName() String
+        +getLocality() int
+        +checkRunAgain() boolean
+        +printGreeting(String greeting) void
+    }
 
-class Greeter {
-  -name : String
-  -locality : int
-  +Greeter(String name)
-  +Greeter(String name, int locality)
-  +getName() String
-  +getLocality() int
-  +setLocality(int locality) void
-  +greet(boolean asciiOnly) String
-  +toString() String
-  +equals(Object other) boolean
-  +getLocalityList() List~Greeting~
-}
+    class Greeter {
+        -name : String
+        -locality : int
+        -localityList : List~String~
+        -HAWAII : int
+        -CHINA : int
+        -ITALY : int
+        -DEFAULT_LOCALITY : int
 
-AlohaWorld --> ConsoleView : uses
-ConsoleView --> Greeter : uses
-AlohaWorld *-- Greeter : has-a
+        +Greeter(String name)
+        +Greeter(String name, int locality)
+
+        +getName() String
+        +getLocality() int
+        +setLocality(int locality) void
+
+        +greet() String
+        +greet(boolean asciiOnly) String
+
+        -getLocalityString() String
+
+        +hashCode() int
+        +equals(Object obj) boolean
+        +toString() String
+
+        +getLocalityList() List~String~
+    }
+
+    AlohaWorld --> ConsoleView : uses
+    ConsoleView --> Greeter : uses
+    AlohaWorld *-- Greeter : has-a
 ```
-
 
 ### Program Flow
 Write a short paragraph detailing the flow of the program in your own words. This is to help you understand / trace the code (and give you practice of something called a code walk that will be required in this course).
