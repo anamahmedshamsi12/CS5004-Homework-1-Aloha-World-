@@ -7,39 +7,41 @@ The following report contains questions you need to answer as part of your submi
 Please link your UML design file here. See resources in the assignment on how to
 link an image in markdown. You may also use [mermaid] class diagrams if you prefer, if so, include the mermaid code here.  You DO NOT have to include Greeting.java as part of the diagram, just the AlohaWorld application that includes: [AlohaWorld.java], [Greeter.java], and [ConsoleView.java].
 
-1. **AlohaWorld** UML mermaid diagram:
 ```mermaid
 classDiagram
+
 class AlohaWorld {
   -AlohaWorld()
   +main(String[] args) void
 }
-```
-2. **Greeter** UML mermaid diagram:
-```mermaid
-classDiagram
-class Greeter {
-   - name: String
-   - locality: int
-   
-   +Greeter(name: String, locality: int)
-   +greet(): Greeting
-   +setLocality(locality: int): void
-  }
-  ```
-3. **ConsoleView** UML mermaid diagram: 
-```mermaid
-classDiagram
+
 class ConsoleView {
-   - SCANNER: Scanner
-   - LOCALITY_OPTIONS: LIST~String~
-   
-   - ConsoleView()
-   - getName(): String
-   + getLocality(): int
-   + checkRunAgain(): boolean
-   + printGreeting(greeting: String): void
-  }
+  -SCANNER : Scanner
+  -LOCALITY_OPTIONS : List~String~
+  -ConsoleView()
+  +getName() String
+  +getLocality() int
+  +checkRunAgain() boolean
+  +printGreeting(String greeting) void
+}
+
+class Greeter {
+  -name : String
+  -locality : int
+  +Greeter(String name)
+  +Greeter(String name, int locality)
+  +getName() String
+  +getLocality() int
+  +setLocality(int locality) void
+  +greet(boolean asciiOnly) String
+  +toString() String
+  +equals(Object other) boolean
+  +getLocalityList() List~Greeting~
+}
+
+AlohaWorld --> ConsoleView : uses
+ConsoleView --> Greeter : uses
+AlohaWorld *-- Greeter : has-a
 ```
 
 
